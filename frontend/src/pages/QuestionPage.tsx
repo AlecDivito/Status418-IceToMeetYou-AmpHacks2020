@@ -20,7 +20,6 @@ const QuestionPage = () => {
 
     let updateQuestionnaire = (question: IQuestion, answers: IAnswer[]) => {
         let completedQuestion = { [question.id]: answers };
-        console.log({ ...context, ...completedQuestion });
         setContext({ ...context, ...completedQuestion });
         setActive(questions[question.id + 1]);
     }

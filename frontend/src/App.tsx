@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Redirect, Route } from 'react-router-dom';
 import Header from './components/Header';
 import "./App.css";
 import QuestionPage from './pages/QuestionPage';
@@ -13,6 +13,9 @@ function App() {
             <main className="content">
                 <Route exact path="/" component={QuestionPage} />
                 <Route path="/location" component={FoundPage} />
+                <Route path="/reset">
+                    <Redirect to="/" />
+                </Route>
             </main>
         </BrowserRouter>
     );

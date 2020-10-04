@@ -1,0 +1,32 @@
+.statistic {
+    padding: 0.5rem;
+    margin: 0.5rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px #EDF2FF, 0 6px 6px #EDF2FF;
+}
+
+.statistic__text {
+    margin: 0px;
+}
+
+.statistic__subtext {
+    color: #333;
+    font-size: .8em;
+    margin: 0px;
+}
+
+.button {
+    border: none;
+    font-size: 1em;
+    text-align: center;
+    width: 100%;
+    padding: .8rem;
+    margin-top: 12px;
+    border-radius: 15px;
+    background-color: #5446A6;
+    color: #fff;
+    box-shadow: 0 10px 20px #EDF2FF, 0 6px 6px #EDF2FF;
+    cursor: pointer;
+    font-family: 'Baloo Bhaina 2';
+    font-size: 1.25em;
+}

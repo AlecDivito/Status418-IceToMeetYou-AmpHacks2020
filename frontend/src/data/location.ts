@@ -1,7 +1,4 @@
-interface ILocation {
-    title: string,
-    picture: string,
-}
+import ILocation from "../models/ILocation";
 
 const Location: { [key: number]: ILocation[] } = {
     7: [

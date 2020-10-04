@@ -14,7 +14,7 @@ const Question = (props: IProps) => {
     let [state, setState] = useState<number[]>([]);
 
     useEffect(() => {
-        if (state.length >= props.max_answers) {
+        if (state.length >= 1 && state.length <= props.max_answers) {
             let answers = props.answers.filter(a => state.includes(a.id));
             props.onSubmit(props, answers);
             setState([]);

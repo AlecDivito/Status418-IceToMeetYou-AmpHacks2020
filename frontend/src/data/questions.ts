@@ -86,7 +86,7 @@ const QuestionsData: IQuestion[] = [
     },
     {
         id: AMENTIAS_ID,
-        question: "I want to live around",
+        question: "I want to live around...",
         max_answers: 3,
         answers: [
             { id: 0, answer: "Schools" },
