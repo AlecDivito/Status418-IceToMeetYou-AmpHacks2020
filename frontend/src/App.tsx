@@ -1,26 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import { HashRouter } from 'react-router-dom';
+import Header from './components/Header';
+import QuestionsData from './data/questions';
+import IAnswer from './models/IAnswer';
+import Questions from './pages/Question';
+import "./App.css";
+import IContext from './models/IContext';
+import IQuestion from './models/IQuestion';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    let questions = QuestionsData;
+    let [context, setContext] = useState<IContext>({});
+    let [active, setActive] = useState<IQuestion>(questions[0]);
+
+    let updateQuestionnaire = (question: IQuestion, answers: IAnswer[]) => {
+        let completedQuestion = { [question.id]: answers };
+        setContext({ ...context, ...completedQuestion });
+        setActive(questions[question.id + 1]);
+    }
+
+    return (
+        <HashRouter>
+            <Header />
+            <main className="content">
+                <Questions {...active} onSubmit={updateQuestionnaire} />
+            </main>
+        </HashRouter>
+    );
 }
 
 export default App;
