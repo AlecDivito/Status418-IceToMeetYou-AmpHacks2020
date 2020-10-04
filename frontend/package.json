@@ -12,6 +12,7 @@
     "react-scripts": "3.4.3",
     "typescript": "~3.7.2"
   },
+  "homepage": "https://alecdivito.github.io/Status418-IceToMeetYou-AmpHacks2020",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

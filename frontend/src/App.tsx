@@ -8,7 +8,7 @@ import FoundPage from './pages/FoundPage';
 function App() {
 
     return (
-        <BrowserRouter>
+        <BrowserRouter basename="/Status418-IceToMeetYou-AmpHacks2020/">
             <Header />
             <main className="content">
                 <Route exact path="/" component={QuestionPage} />
