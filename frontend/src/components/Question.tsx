@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react';
 import ComponentType from '../models/EComponentType';
 import IAnswer from '../models/IAnswer';
 import IQuestion from '../models/IQuestion';
-import ButtonGroup from './ButtonGroup';
-import Query from './Query';
+import ButtonGroup from '../components/ButtonGroup';
+import Query from '../components/Query';
 import "./Question.css";
 
 interface IProps extends IQuestion {
