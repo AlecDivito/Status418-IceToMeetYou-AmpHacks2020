@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import "./Question.css";
-
+import "../components/Question";
 
 const FoundPage = () => {
 

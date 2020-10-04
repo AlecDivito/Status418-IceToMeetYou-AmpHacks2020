@@ -1,9 +1,12 @@
-interface IStatistic {
+import IPick from "./IPick";
+
+export interface IStatistic {
     title: string,
     statistic: string,
+    answers: IPick[],
 }
 
-export default interface ICommunities {
+export interface ICommunities {
     id: number,
     picture: string,
     title: string,
