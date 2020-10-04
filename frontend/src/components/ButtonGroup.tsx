@@ -18,12 +18,6 @@ interface IProps {
 const ButtonGroup = (props: IProps) => {
     let [state, setState] = useState<number[]>([]);
 
-    useEffect(() => {
-        if (props.wanted === 1) {
-            onSubmit();
-        }
-    }, [state])
-
     let onClick = (id: number) => {
         if (state.includes(id)) {
             setState(state.filter(i => i !== id))
@@ -38,11 +32,17 @@ const ButtonGroup = (props: IProps) => {
     }
 
     let onSubmit = () => {
-        if (state.length === props.wanted) {
+        if (state.length >= 1 && state.length <= props.wanted) {
             props.onCompleted(state);
             setState([]);
         }
     }
+
+    useEffect(() => {
+        if (props.wanted === 1) {
+            onSubmit();
+        }
+    }, [state])
 
     let buttonSize = (props.data !== undefined) ? props.data.size : "regular";
 
@@ -58,7 +58,7 @@ const ButtonGroup = (props: IProps) => {
             )}
         </ul>
         <div className="full full--margin">
-            {(props.wanted > 1 && props.wanted === state.length) ? <Button disabled={state.length !== props.wanted} onClick={onSubmit}>Next</Button> : null}
+            {(props.wanted > 1 && state.length >= 1) ? <Button disabled={false} onClick={onSubmit}>Next</Button> : null}
         </div>
     </div>
 }

@@ -1,9 +1,18 @@
 import ComponentType from "../models/EComponentType";
 import IQuestion from "../models/IQuestion";
 
+const SELECT_LANGUAGE_ID = 0;
+const LOCATION_ID = 1;
+const COMMUNITY_ID = 2;
+const AMENTIAS_ID = 3;
+const JOB_SEARCH_ID = 4;
+const ENGLISH_ID = 5;
+const SKILLS_ID = 6;
+
+
 const QuestionsData: IQuestion[] = [
     {
-        id: 0,
+        id: SELECT_LANGUAGE_ID,
         question: "Select Language",
         max_answers: 1,
         answers: [
@@ -29,7 +38,7 @@ const QuestionsData: IQuestion[] = [
         }
     },
     {
-        id: 1,
+        id: LOCATION_ID,
         question: "I want to live in...",
         max_answers: 1,
         answers: [
@@ -52,7 +61,7 @@ const QuestionsData: IQuestion[] = [
         }
     },
     {
-        id: 2,
+        id: COMMUNITY_ID,
         question: "with a community of...",
         max_answers: 3,
         answers: [
@@ -76,7 +85,7 @@ const QuestionsData: IQuestion[] = [
         }
     },
     {
-        id: 3,
+        id: AMENTIAS_ID,
         question: "I want to live around",
         max_answers: 3,
         answers: [
@@ -101,7 +110,7 @@ const QuestionsData: IQuestion[] = [
         }
     },
     {
-        id: 4,
+        id: JOB_SEARCH_ID,
         question: "Do you need to find a job in Canada?",
         max_answers: 1,
         answers: [
@@ -116,7 +125,7 @@ const QuestionsData: IQuestion[] = [
         }
     },
     {
-        id: 5,
+        id: ENGLISH_ID,
         question: "Do you speak English?",
         max_answers: 1,
         answers: [
@@ -132,18 +141,8 @@ const QuestionsData: IQuestion[] = [
             }
         }
     },
-    // {
-    //     id: 3,
-    //     question: "What city do you want to live in",
-    //     max_answers: 1,
-    //     answers: [],
-    //     custom_component: {
-    //         type: ComponentType.Query,
-    //         data: {}
-    //     }
-    // },
     {
-        id: 6,
+        id: SKILLS_ID,
         question: "Select your skills:",
         max_answers: 3,
         answers: [
@@ -168,5 +167,16 @@ const QuestionsData: IQuestion[] = [
         }
     }
 ];
+
+
+export const QuestionIds = {
+    SELECT_LANGUAGE_ID: SELECT_LANGUAGE_ID,
+    LOCATION_ID: LOCATION_ID,
+    COMMUNITY_ID: COMMUNITY_ID,
+    AMENTIAS_ID: AMENTIAS_ID,
+    JOB_SEARCH_ID: JOB_SEARCH_ID,
+    ENGLISH_ID: ENGLISH_ID,
+    SKILLS_ID: SKILLS_ID,
+}
 
 export default QuestionsData;
