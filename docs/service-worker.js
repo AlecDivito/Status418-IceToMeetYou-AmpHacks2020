@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/Status418-IceToMeetYou-AmpHacks2020/precache-manifest.bf58d64b9f2d3fb3f9fdd71f8d58113d.js"
+  "/Status418-IceToMeetYou-AmpHacks2020/precache-manifest.b86f30effef1149c7912b726565201c5.js"
 );
 
 self.addEventListener('message', (event) => {

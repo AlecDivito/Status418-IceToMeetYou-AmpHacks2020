@@ -2,9 +2,9 @@ import ILocation from "../models/ILocation";
 
 const Location: { [key: number]: ILocation[] } = {
     7: [
-        { title: "White Oaks, London ON", picture: "/static/images/whiteoaks.png" },
-        { title: "Bostwick, London ON", picture: "/static/images/whiteoaks.png" },
-        { title: "High Land, London ON", picture: "/static/images/whiteoaks.png" }
+        { title: "White Oaks, London ON", picture: "/Status418-IceToMeetYou-AmpHacks2020/static/images/whiteoaks.png" },
+        { title: "Bostwick, London ON", picture: "/Status418-IceToMeetYou-AmpHacks2020/static/images/whiteoaks.png" },
+        { title: "High Land, London ON", picture: "/Status418-IceToMeetYou-AmpHacks2020/static/images/whiteoaks.png" }
     ]
 };
 
